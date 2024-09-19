@@ -1,4 +1,6 @@
-# PyTorch Implementation of Denoising Diffusion Probabilistic Models [[paper]](https://arxiv.org/abs/2006.11239) [[official repo]](https://github.com/hojonathanho/diffusion)
+# How to accelerate diffusion model training?
+
+## 242R [서울-대학원]신경망응용및실습(영강)(APPLICATIONS AND PRACTICE IN NEURAL NETWORKS(English))-00분반
 
 
 ## Features
