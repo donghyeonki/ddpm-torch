@@ -1,7 +1,3 @@
-<p align="center"><img alt="banner" src="./assets/banner.webp" width="100%"></p>
-
----
-
 # PyTorch Implementation of Denoising Diffusion Probabilistic Models [[paper]](https://arxiv.org/abs/2006.11239) [[official repo]](https://github.com/hojonathanho/diffusion)
 
 
