@@ -3,7 +3,57 @@
 ## 242R [서울-대학원]신경망응용및실습(영강)(APPLICATIONS AND PRACTICE IN NEURAL NETWORKS(English))-00분반
 
 
-## Features
+## Introduction
+
+The complexity of the data distributions we aim to generate increases, training a diffusion model to convergence is becoming increasingly computationally demanding. 
+
+- Training images with Stable-Diffusion-2.0(Rombach et al. 2022) requires 24,000 A100 GPU hours
+
+- Open-Sora (Zheng, Peng, and You 2024) requires 48,000 H800 GPU hours for video training. 
+
+Therefore, accelerating the training of diffusion models is a crucial challenge.
+
+## Previous methods 
+
+Changing the Weighting Scheme
+
+- [Efficient Diffusion Training via Min-SNR Weighting Strategy](https://arxiv.org/abs/2303.09556)
+
+- [Perception Prioritized Training of Diffusion Models](https://arxiv.org/abs/2204.00227)
+
+Changing the Sampling Timestep Scheme
+
+- [A Closer Look at Time Steps is Worthy of Triple Speed-Up for Diffusion Model Training](https://arxiv.org/abs/2405.17403)
+
+However, these methods are all heuristic and are fixed throughout the entire diffusion model training process.
+
+## Goal of this project
+
+The goal of this project is to develop an algorithm that can accelerate the training of diffusion models more effectively than existing methods by being adaptive to the training process.
+
+It doesn't matter whether propose a new weighting method or a timestep sampling method.
+
+The key is to achieve better performance than the baseline when comparing training times in terms of wall clock time, within the same training duration.
+
+## Experiments Settings
+
+Task : image generation
+
+Datasets : [CIFAR-10 datasets](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+- The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+
+- The dataset is automatically downloaded when the code is executed.
+
+Baseline : [Denoising Diffusion Probabilistic Models (DDPM)](https://arxiv.org/abs/2006.11239)
+
+Network architecture : U-Net are famous architectures in the diffusion model area. 
+
+Evaluation protocols : In inference, we default to generating 10K images. Frechet Inception Distance (FID) is used to evaluate both the fidelity and coverage of generated images. You have to use DDPM sampling. (not DDIM)
+
+
+
+## Implementations
 
 - [x] Original DDPM[^1] training & sampling
 - [x] DDIM[^2] sampler
