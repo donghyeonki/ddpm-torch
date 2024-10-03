@@ -2,7 +2,7 @@
 
 ## 242R [서울-대학원]신경망응용및실습(영강)(APPLICATIONS AND PRACTICE IN NEURAL NETWORKS(English))-00분반
 
-## Email
+## Email for QA
 peop1e1n@korea.ac.kr
 
 ## Introduction
