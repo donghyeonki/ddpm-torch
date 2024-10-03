@@ -2,6 +2,8 @@
 
 ## 242R [서울-대학원]신경망응용및실습(영강)(APPLICATIONS AND PRACTICE IN NEURAL NETWORKS(English))-00분반
 
+## Email
+peop1e1n@korea.ac.kr
 
 ## Introduction
 
@@ -12,6 +14,12 @@ The complexity of the data distributions we aim to generate increases, training 
 - Open-Sora (Zheng, Peng, and You 2024) requires 48,000 H800 GPU hours for video training. 
 
 Therefore, accelerating the training of diffusion models is a crucial challenge.
+
+## baseline models
+
+- [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
+- The above code is DDPM which is baseline of this project.
+- You can develop an algorithm that can accelerate the training of diffusion models on this baseline code.
 
 ## Previous methods 
 
